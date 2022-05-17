@@ -12,7 +12,7 @@ class App extends React.Component {
   super(props);
   this.state = {
     searchQuery: "",
-    location: {place_id: "unknown", display_name: ""},
+    location: {place_id: "unknown", display_name: "", lat:"", lon:""},
   };
 }
 
@@ -32,7 +32,7 @@ render() {
       />
       <button onClick={this.getLocation}>Explore!</button>
       {this.state.location.place_id && (
-        <h2>The city is: {this.state.location.display_name}</h2>
+        <><h2>The city is: {this.state.location.display_name}</h2><h2>Latitude is: {this.state.location.lat}</h2><h2>Longitude is: {this.state.location.lon}</h2></>
       )}
     </>
   );
