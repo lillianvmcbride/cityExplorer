@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# LocationIQ Access Token Variable File
+.env
+
 # testing
 /coverage
 
