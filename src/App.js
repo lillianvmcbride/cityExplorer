@@ -13,7 +13,7 @@ class App extends React.Component {
   super(props);
   this.state = {
     searchQuery: "",
-    location: {place_id: "unknown", display_name: "", lat:"", lon:""},
+    location: {place_id: "unknown", display_name: "none", lat:"123", lon:"123"},
   };
 }
 
@@ -42,7 +42,7 @@ render() {
       <button onClick={this.getLocation}>Explore!</button>
       {this.state.location.place_id && 
         <><h2>The city is: {this.state.location.display_name}</h2><h2>Latitude is: {this.state.location.lat}</h2><h2>Longitude is: {this.state.location.lon}</h2>
-        <Map img_url={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${location.lat},${location.long}&zoom=12`} 
+        <Map img_url={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`} 
         city={this.state.location.display_name}
         />
         </>
