@@ -12,7 +12,7 @@ class App extends React.Component {
   super(props);
   this.state = {
     searchQuery: "",
-    location: {place_id: "unknown", display_name: "None"},
+    location: {place_id: "unknown", display_name: ""},
   };
 }
 
