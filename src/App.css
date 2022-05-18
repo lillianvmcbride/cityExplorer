@@ -37,9 +37,16 @@
   }
 }
 
-h1 {
+body {
+  background-color: lightgray;
+}
+
+.h1 {
   text-align: center;
   font-size: 80px;
+  color: #005656;
+  padding: 20px;
+  text-shadow: 2px 2px #282c34;
 }
 
 h2 {
