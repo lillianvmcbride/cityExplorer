@@ -3,9 +3,11 @@
  * @Author Lillian McBride
  */
 
+ import "./App.css";
 import React from "react";
 import axios from "axios";
 import Map from "./Map";
+import {Container, Col, Row} from "react-bootstrap";
 
 class App extends React.Component {
 
@@ -13,7 +15,7 @@ class App extends React.Component {
   super(props);
   this.state = {
     searchQuery: "",
-    location: {place_id: "unknown", display_name: "none", lat:"123", lon:"123"},
+    location: {place_id: "unknown", display_name: "", lat:"", lon:""},
   };
 }
 
@@ -34,19 +36,25 @@ render() {
   console.log(`Location: ${JSON.stringify(this.state.location)}`);
   return (
     <>
-    <h1>City Explorer</h1>
+    <Container>
+      <Row>
+        <Col>
+      <h1>City Explorer</h1>
       <input
         onChange={(e) => this.setState({ searchQuery: e.target.value })}
         placeholder="search for a city"
       />
       <button onClick={this.getLocation}>Explore!</button>
       {this.state.location.place_id && 
-        <><h2>The city is: {this.state.location.display_name}</h2><h2>Latitude is: {this.state.location.lat}</h2><h2>Longitude is: {this.state.location.lon}</h2>
+        <><h2>Location is: {this.state.location.display_name}</h2><h2>Latitude is: {this.state.location.lat}</h2><h2>Longitude is: {this.state.location.lon}</h2>
         <Map img_url={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${this.state.location.lat},${this.state.location.lon}&zoom=12`} 
         city={this.state.location.display_name}
         />
         </>
       }
+      </Col>
+      </Row>
+    </Container>
     </>
   );
 }
