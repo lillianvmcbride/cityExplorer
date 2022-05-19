@@ -4,7 +4,6 @@
  * @description Renders the input box for City Explorer
  */
  import React from "react";
- import axios from "axios";
  import "./App.css";
 
  class Input extends React.Component {
