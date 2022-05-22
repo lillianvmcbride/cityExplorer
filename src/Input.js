@@ -12,7 +12,7 @@
         e.preventDefault();
         let location = document.getElementById("input").value;
         console.log(`input.handleClick() location = ${location}`);
-        this.props.handleChange(location);
+        this.props.handleSearch(location);
     }
 
    render() {

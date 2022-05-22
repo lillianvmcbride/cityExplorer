@@ -38,17 +38,23 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: #C1C400
 }
 
 .h1 {
   text-align: center;
   font-size: 80px;
-  color: #005656;
+  color: #230D62;
   padding: 20px;
   text-shadow: 2px 2px #282c34;
 }
 
-h2 {
+.h2 {
   text-align: center;
+  color: #230D62;
+  padding: 20px;
+}
+
+.ul {
+  list-style: none;
 }
