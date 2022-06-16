@@ -38,7 +38,8 @@
 }
 
 body {
-  background-color: #C1C400
+  background-color: #C1C400;
+  color: #230D62;
 }
 
 .h1 {
@@ -49,6 +50,13 @@ body {
   text-shadow: 2px 2px #282c34;
 }
 
+.map {
+  border: 4px solid #230D62;
+  margin: 40px;
+  float: right;
+  width: 60%
+}
+
 .h2 {
   text-align: center;
   color: #230D62;
@@ -57,4 +65,12 @@ body {
 
 .ul {
   list-style: none;
+}
+
+#input {
+  margin-bottom: 20px;
+}
+
+.dataDisplayDiv {
+  padding-top: 20px;
 }
