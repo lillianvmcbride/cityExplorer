@@ -8,12 +8,19 @@
 
  class Input extends React.Component {
 
+    // handleClick = (e) => {
+    //     e.preventDefault();
+    //     let location = document.getElementById("input").value;
+    //     console.log(`input.handleClick() location = ${location}`);
+    //     this.props.handleSearch(location);
+    // }
+
     handleClick = (e) => {
-        e.preventDefault();
-        let location = document.getElementById("input").value;
-        console.log(`input.handleClick() location = ${location}`);
-        this.props.handleSearch(location);
-    }
+      e.preventDefault();
+      let location = document.getElementById("input").value;
+      console.log(`input.handleClick() location = ${location}`);
+      this.props.handleChange(location);
+  }
 
    render() {
      return  (
